@@ -46,21 +46,17 @@ egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  DZEESSH           "
-echo -e "\e[0m                                                   "
-echo -e "         Username        :  $User"
-echo -e "         Password        :  $Pass"
-echo -e "         Expires on      :  $Expiration_Display"
-echo -e "\e[0m                                                   "	
-echo -e "         Host / IP       :  "$MYIP
-echo -e "         Port OpenSSH    :  "$opensshport
-echo -e "         Port Dropbear   :  "$dropbearport
-echo -e "         Port SSL        :  "$stunnel4port
-echo -e "         Port Squid      :  "$squidport
-echo -e "         Port OpenVPN    :  "$openvpnport
-echo -e "         OpenVPN Config  :  panel.dzeessh.com/listip    "
-echo -e "                                                  "
-echo -e "\e[94m[][][]======================================[][][]\e[0m"
+echo -e "=================|-- SSH & OVPN ACCOUNT --|================="                                                  
+echo -e "Host                  : $MYIP"
+echo -e "Username              : $User"
+echo -e "Password              : $Pass"
+echo -e "Port OpenSSH          : $opensshport"
+echo -e "Port Dropbear         : $dropbearport"
+echo -e "Port SSL              : $stunnel4port"
+echo -e "Port Squid            : $squidport"
+echo -e "Port UDPGW            : 7100, 7200, 7300, 7400, 7500"
+echo -e "Port OpenVPN          : $openvpnport"
+echo -e "OpenVPN TCP, UDP, SSL : https://panel.dzeessh.com/listip"
+echo -e "User Expire           : $Expiration_Display Days"                                               
+echo -e "======================| DZEESSH.com |======================"
 fi
