@@ -15,7 +15,7 @@ if [ "$CEK" != "FordSenpai" ]; then
         echo $CEK;
         exit 0;
 else
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${green}Permisi Accepted...${NC}"
 sleep 1
 clear
 fi
