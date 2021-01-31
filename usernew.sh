@@ -60,7 +60,7 @@ echo -e "         Port Dropbear   :  "$dropbearport
 echo -e "         Port SSL        :  "$stunnel4port
 echo -e "         Port Squid      :  "$squidport
 echo -e "         Port OpenVPN    :  "$openvpnport
-echo -e "              $MYIP/client.ovpn"
+echo -e "         OpenVPN Config  :  panel.dzeessh.com/listip    "
 echo -e "                                                  "
 echo -e "\e[94m[][][]======================================[][][]\e[0m"
 fi
