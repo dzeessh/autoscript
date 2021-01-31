@@ -1,130 +1,42 @@
-	
 #!/bin/bash
- 2 
- 
 host="$(curl -s icanhazip.com)"
- 3 
- 
-printf -- "------------------SCRIPT TAMBAH USER TRIAL-------------------\n"
- 4 
- 
+printf -- "------------------SCRIPT TRIAL SSH & OVPN-------------------\n"
 sleep 0.5
- 5 
- 
-read -p "Masukkan User : " user;
- 6 
- 
-read -p "Masukkan Password : " pass;
- 7 
- 
-read -p "Masukkan Berapa Jam Masa Berlaku User : " exp;
- 8 
- 
+read -p "Input User     : " user;
+read -p "Input Password : " pass;
+read -p "Input hours    : " exp;
 printf -- "-----MEMERIKSA BINARY AT APAKAH SUDAH DIINSTAL-----\n"
- 9 
- 
 sleep 0.5
- 10 
- 
 if [ -f /usr/bin/at ]
- 11 
- 
 then
- 12 
- 
 printf -- "-------------BINARY TERINSTALL------------\n"
- 13 
- 
 else
- 14 
- 
 printf -- "---BINARY TIDAK DITEMUKAN, MENGINSTALL BINARY---\n" && apt install at -y
- 15 
- 
 fi
- 16 
- 
 sleep 0.5
- 17 
- 
 printf -- "---------------MEMBUAT USER---------------\n"
- 18 
- 
 useradd -N -M -s /bin/false "$user"
- 19 
- 
 sleep 0.5
- 20 
- 
 printf -- "-------------MEMBUAT PASSWORD-------------\n"
- 21 
- 
 echo "$user":"$pass" | chpasswd
- 22 
- 
 sleep 0.5
- 23 
- 
 printf -- "----------MEMBUAT MASA BERLAKU------------\n"
- 24 
- 
 #delete user dan kill semua koneksi
- 25 
- 
 echo "userdel -f $user && pkill -u $user" | at now + "$exp" hours >/dev/null 2>&1
- 26 
- 
 sleep 0.5
- 27 
- 
 printf -- "-----------------SELESAI------------------\n"
- 28 
- 
 sleep 0.5
- 29 
- 
 clear
- 30 
- 
-printf -- "------------------------------------------------------------------\n"
- 31 
- 
-printf -- "=====DZEESSH.com | Trial SSH Account=====\n"
- 32 
- 
-printf -- "Host                : $host\n"
- 33 
- 
-printf -- "Username            : $user\n"
- 34 
- 
-printf -- "Password            : $pass\n"
- 35 
- 
-printf -- "Port OpenSSH        : 22,143\n"
- 36 
- 
-printf -- "Port Dropbear       : 444, 445, 446\n"
- 37
- 
-printf -- "Port SSL            : 442, 443\n"
- 38 
- 
-printf -- "Host Squid          : $host\n"
- 39
- 
-printf -- "Port Squid          : 8080, 8000, 3128\n"
- 40 
- 
-printf -- "Port UDPGW          : 7100, 7200, 7300, 7400, 7500\n"
- 41 
- 
-printf -- "Config OpenVPN TCP, UDP, SSL  : https://panel.dzeessh.com/listip\n"
- 42 
- 
-printf -- "Masa Berlaku User   : $exp Jam\n"
- 43 
- 
-printf -- "=====Thank you for using our services=====\n"
- 44
- 
+printf -- "================|-- TRIAL SSH & OVPN ACCOUNT --|================\n"
+printf -- "Host                  : $host\n"
+printf -- "Username              : $user\n"
+printf -- "Password              : $pass\n"
+printf -- "Port OpenSSH          : 22, 143\n"
+printf -- "Port Dropbear         : 444, 445, 446\n"
+printf -- "Port SSL              : 442, 443\n"
+printf -- "Host Squid            : $host\n"
+printf -- "Port Squid            : 8080, 8000, 3128\n"
+printf -- "Port UDPGW            : 7100, 7200, 7300, 7400, 7500\n"
+printf -- "OpenVPN TCP, UDP, SSL : https://panel.dzeessh.com/listip\n"
+printf -- "User Expire           : $exp Hours\n"
+printf -- "========================| DZEESSH.com |========================"
