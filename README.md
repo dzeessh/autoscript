@@ -16,3 +16,4 @@ wget  -O /usr/bin/trials "https://raw.githubusercontent.com/dzeessh/autoscript/m
 
 
 dibuat seperti ini karena setiap sc beda port
+wget  -O user-new1 "https://raw.githubusercontent.com/dzeessh/autoscript/main/user-new1" && chmod +x user-new1
