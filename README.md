@@ -1,11 +1,11 @@
 # autoscript
 
 user-new1 = UNTUK SC KANGARIF & HOSTINGTERMURAH<br>
-
+wget  -O /usr/bin/buat "https://raw.githubusercontent.com/dzeessh/autoscript/main/user-new1" && chmod +x /usr/bin/buat<br><br>
 user-new2 = UNTUK SC BONV<br>
-
+wget  -O /usr/bin/buat "https://raw.githubusercontent.com/dzeessh/autoscript/main/user-new2" && chmod +x /usr/bin/buat<br><br>
 user-new3 = UNTUK SC GEGE<br>
-
+wget  -O /usr/bin/buat "https://raw.githubusercontent.com/dzeessh/autoscript/main/user-new3" && chmod +x /usr/bin/buat<br><br><br><br>
 
 trials1 = UNTUK SC KANGARIF & HOSTINGTERMURAH<br>
 wget  -O /usr/bin/trials "https://raw.githubusercontent.com/dzeessh/autoscript/main/trials1" && chmod +x /usr/bin/trials<br><br>
@@ -16,4 +16,4 @@ wget  -O /usr/bin/trials "https://raw.githubusercontent.com/dzeessh/autoscript/m
 
 
 dibuat seperti ini karena setiap sc beda port
-wget  -O user-new1 "https://raw.githubusercontent.com/dzeessh/autoscript/main/user-new1" && chmod +x user-new1
+
