@@ -1,6 +1,6 @@
 #!/bin/bash
-#Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+# Created by http://www.vps-murah.net
+# Modified by 0123456
 
 red='\e[1;31m'
 green='\e[0;32m'
@@ -9,18 +9,18 @@ echo "Connecting to Server..."
 sleep 0.5
 echo "Checking Permision..."
 sleep 0.4
-CEK=FordSenpai
-if [ "$CEK" != "FordSenpai" ]; then
+CEK=0123456
+if [ "$CEK" != "0123456" ]; then
 		echo -e "${red}Permission Denied!${NC}";
         echo $CEK;
         exit 0;
 else
-echo -e "${green}Permisi Accepted...${NC}"
+echo -e "${green}Permission Accepted...${NC}"
 sleep 1
 clear
 fi
 if [ ! -f /usr/local/bin/deleteduser ]; then
-    echo "echo "Script Created By DZEESSH.com"" > /usr/local/bin/deleteduser
+    echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/deleteduser
 	chmod +x /usr/local/bin/deleteduser
 fi
 hariini=`date +%d-%m-%Y`
@@ -46,7 +46,7 @@ for((i=1; i<=$totalaccounts; i++ ))
            username=$username" " 
        done
        bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
-       echo "echo "DZEESSH.com- User : $username Date Expired On : $tgl $bulantahun"" >> /usr/local/bin/alluser
+       echo "echo "VPS-Murah.net- User : $username Date Expired On : $tgl $bulantahun"" >> /usr/local/bin/alluser
        todaystime=`date +%s`
        if [ $userexpireinseconds -ge $todaystime ] ;
            then
