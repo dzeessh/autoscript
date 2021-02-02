@@ -13,13 +13,13 @@ egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 clear
 echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]=====================================[][][]"
+echo -e "\e[94m[][][]====================================[][][]"
 echo -e "\e[0m                                                   "
 echo -e "\e[93m           AutoScriptVPS by  DZEESSH           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m              Username Already Exist              "
 echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]=====================================[][][]\e[0m"
+echo -e "\e[94m[][][]====================================[][][]\e[0m"
 exit 0
 else
 read -p "         Password       :  " Pass
