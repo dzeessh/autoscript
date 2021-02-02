@@ -46,7 +46,8 @@ egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e "\e[0m                                                   "
-echo -e "======|-- SSH & OVPN ACCOUNT --|======"                                                  
+echo -e "======SSH & OVPN ACCOUNT======"       
+echo -e ""
 echo -e "Host                  : $MYIP"
 echo -e "Username              : $User"
 echo -e "Password              : $Pass"
@@ -61,6 +62,7 @@ echo -e ""
 echo -e "Port UDPGW            : 7100, 7200, 7300, 7400, 7500"
 echo -e ""
 echo -e "OpenVPN TCP, UDP, SSL : https://panel.dzeessh.com/listip"
+echo -e ""
 echo -e ""
 echo -e ""
 echo -e "User Expire           : $Expiration_Display"                                               
