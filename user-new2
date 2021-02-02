@@ -62,8 +62,6 @@ echo -e "Port UDPGW            : 7300"
 echo -e " "
 echo -e "OpenVPN TCP, UDP, SSL : https://panel.dzeessh.com/listip"
 echo -e " "
-echo -e " "
-echo -e " "
 echo -e "User Expire           : $Expiration_Display"                                               
 echo -e "======| Made by DZEESSH |======="
 fi
