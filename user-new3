@@ -64,5 +64,5 @@ echo -e "OpenVPN TCP, UDP, SSL : https://panel.dzeessh.com/listip"
 echo -e ""
 echo -e ""
 echo -e "User Expire           : $Expiration_Display"                                               
-echo -e "==========| DZEESSH.com |==========="
+echo -e "=========| DZEESSH.com |=========="
 fi
