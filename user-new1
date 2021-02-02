@@ -46,7 +46,7 @@ egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e "\e[0m                                                   "
-echo -e "=================|-- SSH & OVPN ACCOUNT --|================="   
+echo -e "======SSH & OVPN ACCOUNT======"   
 echo -e ""
 echo -e "Host                  : $MYIP"
 echo -e "Username              : $User"
@@ -65,5 +65,5 @@ echo -e ""
 echo -e ""
 echo -e ""
 echo -e "User Expire           : $Expiration_Display"                                               
-echo -e "======================| DZEESSH.com |======================"
+echo -e "====| Made by DZEESSH |======"
 fi
