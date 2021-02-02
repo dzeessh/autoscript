@@ -2,9 +2,9 @@
 # Script by : DZEESSH
 clear
 echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]======================================[][][]"
+echo -e "\e[94m[][][]=================================[][][]"
 echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  DZEESSH           "
+echo -e "\e[93m           AutoScriptVPS by dzeessh           "
 echo -e "\e[0m                                                   "
 read -p "         Username       :  " User
 
@@ -13,19 +13,19 @@ egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 clear
 echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]====================================[][][]"
+echo -e "\e[94m[][][]==================================[][][]"
 echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  DZEESSH           "
+echo -e "\e[93m           AutoScriptVPS by DZEESSH           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m              Username Already Exist              "
 echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]====================================[][][]\e[0m"
+echo -e "\e[94m[][][]==================================[][][]\e[0m"
 exit 0
 else
 read -p "         Password       :  " Pass
 read -p "         Active Days    :  " Days
 echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]=====================================[][][]\e[0m"
+echo -e "\e[94m[][][]=================================[][][]\e[0m"
 clear
 sleep 1
 MYIP=$(wget -qO- ipv4.icanhazip.com)
@@ -66,5 +66,5 @@ echo -e ""
 echo -e ""
 echo -e ""
 echo -e "User Expire           : $Expiration_Display"                                               
-echo -e "=========| DZEESSH.com |=========="
+echo -e "========| DZEESSH.com |========="
 fi
