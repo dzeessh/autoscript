@@ -234,6 +234,7 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 
 # download script
 cd /usr/bin
+wget  -O /usr/bin/menu "https://raw.githubusercontent.com/dzeessh/autoscript/main/notes"
 wget -O /usr/bin/buat "https://raw.githubusercontent.com/dzeessh/autoscript/main/user-new1"
 wget -O /usr/bin/trials "https://raw.githubusercontent.com/dzeessh/autoscript/main/trials1"
 wget  -O /usr/bin/del "https://raw.githubusercontent.com/dzeessh/autoscript/main/hapus"
@@ -244,7 +245,7 @@ wget -O /usr/bin/speedtest "https://raw.githubusercontent.com/daenghunter/instal
 
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
-chmod +x menu
+chmod +x /usr/bin/menu
 chmod +x /usr/bin/buat
 chmod +x /usr/bin/trials
 chmod +x /usr/bin/del
