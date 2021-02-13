@@ -1,57 +1,51 @@
 # info
 clear
-notes(){
-  echo "Made by DZEESSH.com"  | tee -a log-install.txt
-  echo -ne "
-    $(ColorGreen '1)') Show command menu.
-    $(ColorGreen '2)') Create a user SSH & OVPN.
-    $(ColorGreen '3)') Create a trial user SSH & OVPN. 
-    $(ColorGreen '4)') Delete a user SSH & OVPN.
-    $(ColorGreen '5)') Delete all expired user SSH & OVPN
-    $(ColorGreen '6)') Check all created user.
-    $(ColorGreen '7)') Reboot the server.
-    $(ColorGreen '8)') Check speed of the server.
-    $(ColorBlue 'Choose an option:') "
-    read a
-        case $a in
-	        1) menus ; menu ;;
-	        2) usernew ; menu ;;
-	        3) trial ; menu ;;
-	        4) hapus ; menu ;;
-	        5) del-expires ; menu ;;
-          	6) cekmember ; menu ;;
-          	7) reboot ; menu ;;
-          	8) speedtest ; menu ;;
-		0) exit 0 ;;
-		*) echo -e $red"Wrong option."$clear; WrongCommand;;
-        esac
-}
+echo "--------------- Welcome To Premium Script Menu ---------------"
+	echo "----------------- by DZEESSH.com --------------------"
+	echo " "
+	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
+	tram=$( free -m | awk 'NR==2 {print $2}' )
+	swap=$( free -m | awk 'NR==4 {print $2}' )
+	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 
-
-function cekmember(){
-  members
-}
-function menus(){
-  notes
-}
-function usernew(){
-  buat
-}
-function trial(){
-  trials
-}
-function hapus(){
-  del
-}
-function del-expires(){
-  del-expired
-}
-
-# Call the menu function
-notes
-
-
-
-
-
-cd
+	echo -e "\e[032;1mCPU Model:\e[0m $cname"
+	echo -e "\e[032;1mNumber Of Cores:\e[0m $cores"
+	echo -e "\e[032;1mCPU Frequency:\e[0m $freq MHz"
+	echo -e "\e[032;1mTotal Amount Of RAM:\e[0m $tram MB"
+	echo -e "\e[032;1mTotal Amount Of Swap:\e[0m $swap MB"
+	echo -e "\e[032;1mSystem Uptime:\e[0m $up"
+	echo -e "-----------------------------------------------------"
+	echo ""
+	echo -e "-----=[ SSH & OpenVPN Section ]=-----"
+	echo -e "${color1}1${color3}.Create User Account"
+	echo -e "${color1}2${color3}.Create Trial Account"
+	echo -e "${color1}3${color3}.Delete User Account"
+	echo -e "${color1}4${color3}.Delete All Expired Account"
+	echo -e "${color1}5${color3}.Check Login Account"
+	echo -e "${color1}6${color3}.Check created Account"
+	echo -e "${color1}7${color3}.Check speed of the server"
+	echo -e "${color1}8${color3}.Reboot the server"
+	read -p "Choose an option from (1-8): " x
+	if test $x -eq 1; then
+	buat
+	elif test $x -eq 2; then
+	trials
+	elif test $x -eq 3; then
+	del
+	elif test $x -eq 4; then
+	del-expired
+	elif test $x -eq 5; then
+	ceks
+	elif test $x -eq 6; then
+	members
+	elif test $x -eq 7; then
+	speedtest
+	elif test $x -eq 8; then
+	reboot
+	else
+	echo "Options Not Available In Menu."
+	echo " "
+	exit
+	fi
