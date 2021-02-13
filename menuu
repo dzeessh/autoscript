@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 echo "--------------- Welcome To Premium Script Menu ---------------"
 	echo "----------------- by DZEESSH.com --------------------"
 	echo " "
