@@ -33,5 +33,5 @@ echo "--------------- Welcome To Premium Script Menu ---------------"
 	else
 	echo "Options Not Available In Menu."
 	echo " "
-	return 1
+	exit
 	fi
