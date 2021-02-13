@@ -1,8 +1,8 @@
 #!/bin/bash
-
-echo -e "••••••••••••••••••••••••••••••••"
+clear
+echo -e "\033[0;37m••••••••••••••••••••••••••••••••"
 echo "USERNAME          EXP DATE     "
-echo -e "••••••••••••••••••••••••••••••••"
+echo -e "\033[0;37m••••••••••••••••••••••••••••••••"
 while read expired
 do
         AKUN="$(echo $expired | cut -d: -f1)"
@@ -14,6 +14,7 @@ do
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo -e "••••••••••••••••••••••••••••••••"
-echo "Total Account's: $JUMLAH user"
+echo "Total Account's : $JUMLAH user"
 echo -e "••••••••••••••••••••••••••••••••"
 echo -e "Made by DZEESSH.com"
+echo -e ""
