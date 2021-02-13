@@ -1,22 +1,7 @@
 #!/bin/bash
 clear
 echo "--------------- Welcome To Premium Script Menu ---------------"
-	echo "----------------- by DZEESSH.com --------------------"
-	echo " "
-	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
-	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
-	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
-	tram=$( free -m | awk 'NR==2 {print $2}' )
-	swap=$( free -m | awk 'NR==4 {print $2}' )
-	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-
-	echo -e "\e[032;1mCPU Model:\e[0m $cname"
-	echo -e "\e[032;1mNumber Of Cores:\e[0m $cores"
-	echo -e "\e[032;1mCPU Frequency:\e[0m $freq MHz"
-	echo -e "\e[032;1mTotal Amount Of RAM:\e[0m $tram MB"
-	echo -e "\e[032;1mTotal Amount Of Swap:\e[0m $swap MB"
-	echo -e "\e[032;1mSystem Uptime:\e[0m $up"
-	echo -e "-----------------------------------------------------"
+	echo "--------------- by DZEESSH.com --------------------"
 	echo ""
 	echo -e "-----=[ SSH & OpenVPN Section ]=-----"
 	echo -e "${color1}1${color3}.Create User Account"
@@ -27,6 +12,7 @@ echo "--------------- Welcome To Premium Script Menu ---------------"
 	echo -e "${color1}6${color3}.Check created Account"
 	echo -e "${color1}7${color3}.Check speed of the server"
 	echo -e "${color1}8${color3}.Reboot the server"
+	echo -e "-------------------------------------"
 	read -p "Choose an option from (1-8): " x
 	if test $x -eq 1; then
 	buat
