@@ -1,6 +1,6 @@
 # info
 clear
-menu(){
+notes(){
   echo "Made by DZEESSH.com"  | tee -a log-install.txt
   echo -ne "
     $(ColorGreen '1)') Show command menu.
@@ -14,7 +14,7 @@ menu(){
     $(ColorBlue 'Choose an option:') "
     read a
         case $a in
-	        1) menu ; menu ;;
+	        1) menus ; menu ;;
 	        2) usernew ; menu ;;
 	        3) trial ; menu ;;
 	        4) hapus ; menu ;;
@@ -31,7 +31,7 @@ menu(){
 function cekmember(){
   members
 }
-function menu(){
+function menus(){
   notes
 }
 function usernew(){
