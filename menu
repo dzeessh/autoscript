@@ -52,7 +52,7 @@ function cek{
   ceks
 }
 # Call the menu function
-menu
+notes
 
 
 
