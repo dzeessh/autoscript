@@ -26,7 +26,7 @@ echo "speedtest    (Speedtest VPS)"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt
 echo "----------"  | tee -a log-install.txt
-echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
+echo "Webmin   : http://54.255.125.126:10000/"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "VPS AUTO REBOOT TIAP JAM 12 MALAM"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
