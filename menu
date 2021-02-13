@@ -15,13 +15,14 @@ echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
 echo "notes    (Menampilkan daftar perintah yang tersedia)"  | tee -a log-install.txt
-echo "buat    (Membuat Akun SSH)"  | tee -a log-install.txt
-echo "trials  (Membuat Akun Trial)"  | tee -a log-install.txt
-echo "del     (Menghapus Akun SSH)"  | tee -a log-install.txt
-echo "ceks    (Cek User Login)"  | tee -a log-install.txt
-echo "members (Cek Member SSH)"  | tee -a log-install.txt
-echo "reboot (Reboot VPS)"  | tee -a log-install.txt
-echo "speedtest (Speedtest VPS)"  | tee -a log-install.txt
+echo "buat         (Membuat Akun SSH)"  | tee -a log-install.txt
+echo "trials       (Membuat Akun Trial)"  | tee -a log-install.txt
+echo "del          (Menghapus Akun SSH)"  | tee -a log-install.txt
+echo "del-expired  (Menghapus Akun SSH)"  | tee -a log-install.txt
+echo "ceks         (Cek User Login)"  | tee -a log-install.txt
+echo "members      (Cek Member SSH)"  | tee -a log-install.txt
+echo "reboot       (Reboot VPS)"  | tee -a log-install.txt
+echo "speedtest    (Speedtest VPS)"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt
 echo "----------"  | tee -a log-install.txt
