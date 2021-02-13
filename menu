@@ -9,7 +9,7 @@ echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
 echo "Dropbear : 444, 445, 446"  | tee -a log-install.txt
 echo "SSL/SSL  : 442, 443"  | tee -a log-install.txt
 echo "Squid3   : 8080, 8000, 3218 (limit to IP SSH)"  | tee -a log-install.txt
-echo "OpenVPN  : https://panel.dzeessh.com/listip"  | tee -a log-install.txt
+echo "OpenVPN  : "  | tee -a log-install.txt
 echo "UDPGW   : 7300"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
