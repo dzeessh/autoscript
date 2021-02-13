@@ -299,7 +299,7 @@ echo "nginx    : 81"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
-echo "TYPE " NOTES " TO START!
+echo "TYPE    NOTES    TO START!"
 echo "==========================================="  | tee -a log-install.txt
 cd
 rm -f /root/install.sh
