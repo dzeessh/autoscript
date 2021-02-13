@@ -1,0 +1,57 @@
+# info
+clear
+notes(){
+  echo "Made by DZEESSH.com"  | tee -a log-install.txt
+  echo -ne "
+    $(ColorGreen '1)') Show command menu.
+    $(ColorGreen '2)') Create a user SSH & OVPN.
+    $(ColorGreen '3)') Create a trial user SSH & OVPN. 
+    $(ColorGreen '4)') Delete a user SSH & OVPN.
+    $(ColorGreen '5)') Delete all expired user SSH & OVPN
+    $(ColorGreen '6)') Check all created user.
+    $(ColorGreen '7)') Reboot the server.
+    $(ColorGreen '8)') Check speed of the server.
+    $(ColorBlue 'Choose an option:') "
+    read a
+        case $a in
+	        1) menus ; menu ;;
+	        2) usernew ; menu ;;
+	        3) trial ; menu ;;
+	        4) hapus ; menu ;;
+	        5) del-expires ; menu ;;
+          	6) cekmember ; menu ;;
+          	7) reboot ; menu ;;
+          	8) speedtest ; menu ;;
+		0) exit 0 ;;
+		*) echo -e $red"Wrong option."$clear; WrongCommand;;
+        esac
+}
+
+
+function cekmember(){
+  members
+}
+function menus(){
+  notes
+}
+function usernew(){
+  buat
+}
+function trial(){
+  trials
+}
+function hapus(){
+  del
+}
+function del-expires(){
+  del-expired
+}
+
+# Call the menu function
+notes
+
+
+
+
+
+cd
