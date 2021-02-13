@@ -1,35 +1,61 @@
 # info
 clear
-echo "Autoscript Include:" | tee log-install.txt
-echo "===========================================" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "Service"  | tee -a log-install.txt
-echo "-------"  | tee -a log-install.txt
-echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
-echo "Dropbear : 444, 445, 446"  | tee -a log-install.txt
-echo "SSL/SSL  : 442, 443"  | tee -a log-install.txt
-echo "Squid3   : 8080, 8000, 3218 (limit to IP SSH)"  | tee -a log-install.txt
-echo "OpenVPN  : "  | tee -a log-install.txt
-echo "UDPGW   : 7300"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "Script"  | tee -a log-install.txt
-echo "------"  | tee -a log-install.txt
-echo "notes    (Menampilkan daftar perintah yang tersedia)"  | tee -a log-install.txt
-echo "buat         (Membuat Akun SSH)"  | tee -a log-install.txt
-echo "trials       (Membuat Akun Trial)"  | tee -a log-install.txt
-echo "del          (Menghapus Akun SSH)"  | tee -a log-install.txt
-echo "del-expired  (Menghapus Akun SSH)"  | tee -a log-install.txt
-echo "ceks         (Cek User Login)"  | tee -a log-install.txt
-echo "members      (Cek Member SSH)"  | tee -a log-install.txt
-echo "reboot       (Reboot VPS)"  | tee -a log-install.txt
-echo "speedtest    (Speedtest VPS)"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "Fitur lain"  | tee -a log-install.txt
-echo "----------"  | tee -a log-install.txt
-echo "Webmin   : http://54.255.125.126:10000/"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "VPS AUTO REBOOT TIAP JAM 12 MALAM"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "==========================================="  | tee -a log-install.txt
-echo "Made by DZEESSH.com"  | tee -a log-install.txt
+menu(){
+  echo "Made by DZEESSH.com"  | tee -a log-install.txt
+  echo -ne "
+    $(ColorGreen '1)') Show command menu.
+    $(ColorGreen '2)') Create a user SSH & OVPN.
+    $(ColorGreen '3)') Create a trial user SSH & OVPN. 
+    $(ColorGreen '4)') Delete a user SSH & OVPN.
+    $(ColorGreen '5)') Delete all expired user SSH & OVPN
+    $(ColorGreen '6)') Check who login.
+    $(ColorGreen '7)') Check all created user.
+    $(ColorGreen '8)') Reboot the server.
+    $(ColorGreen '9)') Check speed of the server.
+    $(ColorBlue 'Choose an option:') "
+    read a
+        case $a in
+	        1) menu ; menu ;;
+	        2) usernew ; menu ;;
+	        3) trial ; menu ;;
+	        4) hapus ; menu ;;
+	        5) del-expires ; menu ;;
+          6) cek menu ;;
+          7) cekmember ; menu ;;
+          8) reboot ; menu ;;
+          9) speedtest ; menu ;;
+		0) exit 0 ;;
+		*) echo -e $red"Wrong option."$clear; WrongCommand;;
+        esac
+}
+
+
+function cekmember(){
+  members
+}
+function menu(){
+  notes
+}
+function usernew(){
+  buat
+}
+function trial(){
+  trials
+}
+function hapus(){
+  del
+}
+function del-expires(){
+  del-expired
+}
+function cek{
+  ceks
+}
+# Call the menu function
+menu
+
+
+
+
+
 cd
