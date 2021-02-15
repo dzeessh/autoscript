@@ -19,7 +19,7 @@ echo -e "${green}Permission Accepted...${NC}"
 sleep 1
 clear
 fi
-MAX=1
+MAX=3
 if [ -e "/var/log/auth.log" ]; then
         OS=1;
         LOG="/var/log/auth.log";
