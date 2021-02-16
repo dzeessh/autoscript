@@ -1,11 +1,6 @@
 #!/bin/bash
 # Script by : DZEESSH
 clear
-echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  DZEESSH           "
-echo -e "\e[0m                                                   "
 read -p "         Username       :  " User
 
 # Check If Username Exist, Else Proceed
@@ -24,8 +19,6 @@ exit 0
 else
 read -p "         Password       :  " Pass
 read -p "         Active Days    :  " Days
-echo -e "\e[0m                                                   "
-echo -e "\e[94m[][][]=====================================[][][]\e[0m"
 clear
 sleep 1
 MYIP=$(wget -qO- ipv4.icanhazip.com)
@@ -58,9 +51,13 @@ echo -e "Host Squid            : $MYIP"
 echo -e ""
 echo -e "Port Squid            : 8080, 8000, 3128"
 echo -e " "
-echo -e "Port UDPGW            : 7100, 7200, 7300, 7400, 7500"
+echo -e "Port UDPGW            : 7300"
 echo -e " "
-echo -e "OpenVPN TCP, UDP, SSL : https://panel.dzeessh.com/listip"
+echo -e "OpenVPN TCP (1194)    : http://$host:81/openvpn-tcp.ovpn"
+echo -e " "
+echo -e "OpenVPN UDP (1195)    : http://$host:81/openvpn-udp.ovpn"
+echo -e " "
+echo -e "OpenVPN SSL (587)    : http://$host:81/openvpn-tls.ovpn"
 echo -e " "
 echo -e "User Expire           : $Expiration_Display"                                               
 echo -e "=======| Made by DZEESSH |======="
