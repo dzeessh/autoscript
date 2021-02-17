@@ -13,3 +13,5 @@ wget  -O /usr/bin/trials "https://raw.githubusercontent.com/dzeessh/autoscript/m
 
 dibuat seperti ini karena setiap sc beda port
 
+LIMIT
+wget  -O /usr/bin/lims "https://raw.githubusercontent.com/dzeessh/autoscript/main/lims" && chmod +x /usr/bin/lims
