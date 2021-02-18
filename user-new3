@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script by : DZEESSH
 clear
-read -p "         Username       :  " User
+read -p "Username       :  " User
 
 # Check If Username Exist, Else Proceed
 egrep "^$User" /etc/passwd >/dev/null
@@ -17,8 +17,8 @@ echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]==================================[][][]\e[0m"
 exit 0
 else
-read -p "         Password       :  " Pass
-read -p "         Active Days    :  " Days
+read -p "Password       :  " Pass
+read -p "Active Days    :  " Days
 clear
 sleep 1
 MYIP=$(wget -qO- ipv4.icanhazip.com)
