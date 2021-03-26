@@ -1,8 +1,7 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
 #Script by FordSenpai
-clear
-MAX=3
+read -p "limit: " MAX
 echo " "
 echo " "
 echo "-------------------------------------------"
