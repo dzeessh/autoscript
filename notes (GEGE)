@@ -33,6 +33,7 @@ echo "--------------- Welcome To Premium Script Menu ---------------"
 	clear
 	speedtest
 	elif test $x -eq 8; then
+	clear
 	/etc/init.d/dropbear restart
 	/etc/init.d/ssh restart
 	services stunnel4 restart
