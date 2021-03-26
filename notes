@@ -21,7 +21,7 @@ echo "--------------- Welcome To Premium Script Menu ---------------"
 	clear
 	trials
 	elif test $x -eq 3; then
-	del
+	hapus
 	elif test $x -eq 4; then
 	delexp
 	elif test $x -eq 5; then
