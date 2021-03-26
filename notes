@@ -18,6 +18,7 @@ echo "--------------- Welcome To Premium Script Menu ---------------"
 	if test $x -eq 1; then
 	buat
 	elif test $x -eq 2; then
+	clear
 	trials
 	elif test $x -eq 3; then
 	del
