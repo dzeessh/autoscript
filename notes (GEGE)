@@ -23,12 +23,14 @@ echo "--------------- Welcome To Premium Script Menu ---------------"
 	elif test $x -eq 3; then
 	hapus
 	elif test $x -eq 4; then
+	clear
 	delexp
 	elif test $x -eq 5; then
 	ceks
 	elif test $x -eq 6; then
 	member
 	elif test $x -eq 7; then
+	clear
 	speedtest
 	elif test $x -eq 8; then
 	/etc/init.d/dropbear restart
