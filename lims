@@ -2,19 +2,7 @@
 #Licensed to https://www.hostingtermurah.net/
 #Script by FordSenpai
 clear
-fi
 MAX=3
-if [ -e "/var/log/auth.log" ]; then
-        OS=1;
-        LOG="/var/log/auth.log";
-fi
-if [ -e "/var/log/secure" ]; then
-        OS=2;
-        LOG="/var/log/secure";
-fi
-if [[ ${1+x} ]]; then
-        MAX=$1;
-fi
 echo " "
 echo " "
 echo "-------------------------------------------"
