@@ -36,7 +36,7 @@ echo "--------------- Welcome To Premium Script Menu ---------------"
 	clear
 	/etc/init.d/dropbear restart
 	/etc/init.d/ssh restart
-	services stunnel4 restart
+	/etc/init.d/stunnel4 restart
 	/etc/init.d/squid restart
 	elif test $x -eq 9; then
 	reboot
