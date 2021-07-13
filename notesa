@@ -1,10 +1,10 @@
 #!/bin/bash
 clear
-echo "\e[32m=========================================================="
-echo "\e[32m---------------\e[96mSSH/VPN Menu by DZEESSH.com\e[32m----------------"
-echo "\e[32m=========================================================="
+echo -e "\e[32m=========================================================="
+echo -e "\e[32m---------------\e[96mSSH/VPN Menu by DZEESSH.com\e[32m----------------"
+echo -e "\e[32m=========================================================="
 	echo ""
-	echo -e "-----=[ SSH & OpenVPN Section ]=-----"
+	echo -e "\e[32m-----=[ SSH & OpenVPN Section ]=-----"
 	echo -e "\e[31m1\e[97m.Create User Account"
 	echo -e "\e[31m2\e[97m.Create Trial Account (Hours)"
 	echo -e "\e[31m3\e[97m.Renew User Account"
@@ -16,8 +16,8 @@ echo "\e[32m=========================================================="
 	echo -e "\e[31m9\e[97m.Check Speed Of The Server"
 	echo -e "\e[31m10\e[97m.Restart (Dropbear, OpenSSH, Stunnel4, Squid)"
 	echo -e "\e[31m11\e[97m.Reboot The Server"
-	echo -e "-------------------------------------"
-	read -p "Choose an option from (1-8): " x
+	echo -e "\e[32m-------------------------------------"
+	read -p "\e[32mChoose an option from (1-8): " x
 	if test $x -eq 1; then
 	buat
 	elif test $x -eq 2; then
