@@ -17,7 +17,7 @@ echo -e "\e[32m=========================================================="
 	echo -e "\e[31m10\e[97m.Restart (Dropbear, OpenSSH, Stunnel4, Squid)"
 	echo -e "\e[31m11\e[97m.Reboot The Server"
 	echo -e "\e[32m-------------------------------------"
-	read -p "\e[32mChoose an option from (1-8): " x
+	read -p "Choose an option from (1-8): " x
 	if test $x -eq 1; then
 	buat
 	elif test $x -eq 2; then
