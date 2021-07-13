@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo -e "\e[32m-------------------------------"
-echo "\e[32mUSERNAME          EXP DATE     "
+echo -e "\e[32mUSERNAME          EXP DATE     "
 echo -e "\e[32m-------------------------------"
 while read expired
 do
