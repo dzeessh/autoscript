@@ -7,8 +7,6 @@ wget  -O /usr/bin/buat "https://raw.githubusercontent.com/dzeessh/autoscript/mai
 
 trials1 = UNTUK SC GEGE<br>
 wget  -O /usr/bin/trials "https://raw.githubusercontent.com/dzeessh/autoscript/main/trials1" && chmod +x /usr/bin/trials<br><br>
-trials3 = UNTUK SC HOSTINGTERMURAH<br>
-wget  -O /usr/bin/trials "https://raw.githubusercontent.com/dzeessh/autoscript/main/trials3" && chmod +x /usr/bin/trials<br><br><br><br>
 
 
 dibuat seperti ini karena setiap sc beda port
